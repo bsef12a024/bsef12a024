@@ -1,0 +1,68 @@
+﻿@model term_project.Models.contact_message
+
+@{
+    ViewBag.Title = "contactUs";
+}
+
+ <div class="row">
+
+        <div class="col-md-6 "   >
+            <div  class="page-header"  >
+                <h1> Contact Us </h1>
+                <p >
+                    If you want to guide us, help us by writing us. You are more than welcome.
+                </p>
+                @using (Html.BeginForm("save_message", "contact" , FormMethod.Post))
+                {
+                    @Html.ValidationSummary(true)
+                    
+                <label style="font-size:large;">Name</label>
+                @:&nbsp
+            @Html.TextBoxFor(model => model.name, new { style = "width:150px" })
+                @:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <label style="font-size:large">Email</label>
+                @:&nbsp
+                                    @Html.TextBoxFor(model => model.email, new { style = "width:150px" })
+
+                <br />
+                <br />
+                <label style="font-size:large">Message</label>
+                <br />
+            @Html.TextBoxFor(model => model.message, new { style="width:470px; height:250px" })
+                   
+                <br />
+                <br />
+                @:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                <button type="submit"class ="btn btn-success" >Submit</button>
+                }
+                @if(Session["c"]!= null)
+        {
+            <p style="color:green">Thank You for your Contact.</p>
+            <p style="color:green">Your message is sent, our team will contact you very soon after having a look on it !!!</p>
+                    
+        }
+
+        @{Session["c"] = null;}
+
+
+                       
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-6 "   >
+            <div  class="page-header"  >
+                <h1> Head of Team </h1>
+                <p >
+                    Tabeer Irshad</p>
+                   <p> 03361772731</p>
+                   <p> tabeer.irshad@gmail.com </p>
+                    <p>Just Hunting Office, Plot # 3, Trade Center, Lahore.</p>
+                                <img src="../../Images/9.jpg" height="300" width="300"/>
+
+            </div>
+        </div>
+    </div>

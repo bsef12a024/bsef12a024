@@ -1,0 +1,46 @@
+﻿@model term_project.Models.user
+
+@{
+    ViewBag.Title = "signIn";
+}
+
+<p>Not Have An Account ? </p>
+    <p>Its Free 
+
+        <a href="../user/signUp" >Sing Up</a> Now.</p>
+
+        <br />
+        <br />
+        <br />
+    @using (Html.BeginForm("signIn_check", "user" , FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <br />
+        
+        <legend>User Name
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.uname)
+            @Html.ValidationMessageFor(model=>model.uname)
+        </legend>
+                <legend>Password
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.password)
+            @Html.ValidationMessageFor(model=>model.password)
+            </legend>
+
+        @if(Session["a"]=="abc")
+        {
+            <p style="color:red">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIncorrect User Name or Password !!!</p>
+        }
+        <br />
+
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        
+        <button type="submit" class ="btn btn-success" >Sign In</button>
+
+        
+
+        @{Session["a"] = null;}
+        </fieldset>
+    }

@@ -1,0 +1,74 @@
+﻿@model term_project.Models.user
+
+
+
+@{
+    ViewBag.Title = "signUp";
+}
+
+<p>Already Have An Account ? </p>
+    <p> 
+        <a href="../user/signIn" >Sing In</a> Here.</p>
+@using (Html.BeginForm("signUp_save", "user" , FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>First Name
+        @*<div class="editor-label"> 
+            @Html.LabelFor(model => model.fname)
+        </div>
+        <div class="editor-field">*@
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.fname)
+            @Html.ValidationMessageFor(model=>model.fname)
+
+        @*</div>*@
+        </legend>
+        <legend>Last Name
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.lname)
+            @Html.ValidationMessageFor(model=>model.lname)
+            </legend>
+         <legend>User Name
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.uname)
+            @Html.ValidationMessageFor(model=>model.uname)
+
+             </legend>
+         <legend>Pass Word
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.password)
+            @Html.ValidationMessageFor(model=>model.password)
+
+
+             </legend>
+         <legend>Gender
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.gender)
+            @Html.ValidationMessageFor(model=>model.gender)
+
+             </legend>
+         <legend>Email Address
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.email)
+            @Html.ValidationMessageFor(model=>model.email)
+
+             </legend>
+         <legend>Contact Number
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model=>model.contact)
+            @Html.ValidationMessageFor(model=>model.contact)
+
+
+             </legend>
+        <br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button type="submit" class ="btn btn-success" >Sign Up</button>
+
+        <br /><br /><br /><br />
+
+
+
+
+        </fieldset>
+}

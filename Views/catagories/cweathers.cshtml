@@ -1,0 +1,38 @@
+﻿
+@model List<term_project.Models.weather>
+@{
+    ViewBag.Title = "cweathers";
+}
+<br />
+<br />
+<legend style="color:green">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Weathers of Pakistan<br />
+<br /></legend>
+
+<br />
+<br />
+
+
+<table class="table table-hover" style=" border:double; border-color:black">
+            <tr>
+                <td><strong>Id</strong></td>
+                <td><strong>Name</strong></td>
+                <td><strong>Duration</strong></td>
+                </tr>
+                @foreach(var s in Model)
+            {
+                
+                {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.name</td>
+                    <td>@s.duration</td>
+                </tr>
+                }
+            }
+                
+        </table>
+<br />
+<br />
+<br />
+
+

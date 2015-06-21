@@ -1,0 +1,43 @@
+﻿
+
+@model List<term_project.Models.contact_message>
+@{
+    ViewBag.Title = "new_messages";
+}
+<br />
+<br />
+
+
+<legend style="color:green">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp New Messages <br /><br /></legend>
+<br />
+
+<br />
+
+
+<table class="table table-hover" style=" border:double; border-color:black">
+            <tr>
+                <td><strong>Id</strong></td>
+                <td><strong>Name</strong></td>
+                <td><strong>Email</strong></td>
+                <td><strong>Message</strong></td>
+                <td><strong>Seen</strong></td>
+
+                </tr>
+    @foreach(var s in Model)
+            {
+                
+                {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.name</td>
+                    <td>@s.email</td>
+                    <td>@s.message</td>
+                    <td><a href="../contact/seen/@s.Id">Seen</a></td>
+                </tr>
+                }
+            }
+                
+        </table>
+<br />
+<br />
+<br />

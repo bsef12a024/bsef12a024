@@ -1,0 +1,39 @@
+﻿
+@model List<term_project.Models.weapon>
+@{
+    ViewBag.Title = "cweapons";
+}
+<br />
+<br />
+<legend style="color:green">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hunting Weapons<br />
+<br /></legend>
+
+<br />
+<br />
+
+
+<table class="table table-hover" style=" border:double; border-color:black">
+            <tr>
+                <td><strong>Id</strong></td>
+                <td><strong>Name</strong></td>
+                <td><strong>Price</strong></td>
+                </tr>
+                @foreach(var s in Model)
+            {
+                
+                {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.name</td>
+                    <td>@s.price &nbsp&nbsp RS/-</td>
+
+                </tr>
+                }
+            }
+                
+        </table>
+<br />
+<br />
+<br />
+
+

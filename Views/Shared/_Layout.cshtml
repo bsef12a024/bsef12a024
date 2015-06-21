@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hunting Places in Pakistan</title>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/bootstrap.js"></script>
+    <style>
+ 
+.footer {
+ 
+    position: fixed;
+ 
+    height: 30px;
+ 
+    bottom:  0;
+ 
+    width: 100%;
+ 
+    background-color: black;
+ 
+}
+ 
+</style>
+
+</head>
+<body @*background="../../Images/13.JPG"*@>
+    <nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-btn"  href="../Home/Index" >
+        <img alt="Brand" src="../../Images/a.JPG" height="50" width="100" />
+      </a>
+    </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../Home/Index"">Home</a></li>
+                <li class="active"><a href="../catagories/catagories">Categories</a></li>
+                <li class="active"><a href="../team/aboutUs">About Us</a></li>
+                <li class="active"><a href="../contact/contactUs">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+               @if(Session["signIn_check"]!=null)
+               {
+                   <li><p style="color:white;width:auto;text-indent:inherit"><br />Welcome @Session["signIn_check"]&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></li>
+                   <li class="active"><a href="../user/signOut">Log Out</a></li>
+               }
+                else
+                {
+                   <li class="active"><a href="../user/signIn">Sign In</a></li>
+               }
+                <li class="active"><a href="../user/signUp">Sign Up</a></li>
+                
+                 </ul>
+        </div>
+    </nav>
+
+    
+
+
+
+
+
+    @RenderBody()
+
+
+
+
+
+       <div class="footer">
+ 
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp; Copy Rights Reserved | Privacy | Terms</p>
+ 
+      </div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+﻿@model term_project.Models.animal
+
+@{
+    ViewBag.Title = "add_animal1";
+}
+
+<br />
+<br />
+<legend style="color:green">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Add a New Animal<br />
+<br /></legend>
+
+<br />
+<br />
+
+@using (Html.BeginForm("add_animal", "catagories" , FormMethod.Post))
+                {
+                    @Html.ValidationSummary(true)
+                    
+                <label style="font-size:large;">Name</label>
+                @:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            @Html.TextBoxFor(model => model.name)
+                <br /><br />
+                <label style="font-size:large">Habidant</label>
+                @:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    @Html.TextBoxFor(model => model.place)
+    <br />
+                <br />
+                
+                <label style="font-size:large">Killer Weapon</label>
+                @:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                 @Html.TextBoxFor(model => model.weapon)
+    <br />
+                <br />
+                   <label style="font-size:large">Helping Animal</label>
+                @:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                 @Html.TextBoxFor(model => model.hanimal)
+    <br />
+                <br />
+    <label style="font-size:large">Suitable Weather</label>
+                @:&nbsp&nbsp
+                 @Html.TextBoxFor(model => model.weather)
+    <br />
+                <br />
+                @:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                
+                <button type="submit"class ="btn btn-success" >Submit</button>
+                }

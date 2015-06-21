@@ -1,0 +1,48 @@
+﻿@model List<term_project.Models.user>
+@{
+    ViewBag.Title = "delete_user";
+}
+<br />
+<br />
+
+
+<legend style="color:green">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Delete An Authenticated User <br /><br /></legend>
+<br />
+
+<br />
+
+
+<table class="table table-hover" style=" border:double; border-color:black">
+            <tr>
+                <td><strong>Id</strong></td>
+                <td><strong>Fname</strong></td>
+                <td><strong>Lname</strong></td>
+                <td><strong>Uname</strong></td>
+                <td><strong>Password</strong></td>
+                <td><strong>Gender</strong></td>
+                <td><strong>Email</strong></td>
+                <td><strong>Contact #</strong></td>
+                <td><strong>Delete</strong></td>
+                </tr>
+    @foreach(var s in Model)
+            {
+                
+                {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.fname</td>
+                    <td>@s.lname</td>
+                    <td>@s.uname</td>
+                    <td>@s.password</td>
+                    <td>@s.gender</td>
+                    <td>@s.email</td>
+                    <td>@s.contact</td>
+                    <td><a href="../admin/cancle_user_request1/@s.Id">Delete</a></td>
+                </tr>
+                }
+            }
+                
+        </table>
+<br />
+<br />
+<br />
